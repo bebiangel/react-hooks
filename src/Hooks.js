@@ -1,8 +1,15 @@
 import React, { useState, useEffect } from "react";
 
-export default function Hooks() {
+export default function Hooks(props) {
   //
-  const [name, setName] = useState("Lionel");
+  console.log(props);
+  const [name, setName] = useState(() => {
+    //
+    const a = "Lionel";
+    console.log(a);
+    return props.number;
+  });
+
   const [surname, setSurname] = useState("Messi");
 
   useEffect(() => {
@@ -17,6 +24,7 @@ export default function Hooks() {
   function onChangeSurame(e) {
     setSurname(e.target.value);
   }
+
   return (
     <>
       <div>

@@ -6,7 +6,7 @@ function App() {
   //
   return (
     <div>
-      <Hooks />
+      <Hooks number={3} />
 
       <Counter />
     </div>
