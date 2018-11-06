@@ -34,3 +34,9 @@ const [name, setName] = useState(() => {
 componentDidMount, componentDidUpdate, componentWillUnmount 와 같은 기능을 수행할 수 있다.
 useEffect 를 호출할때, React 는 변화된 DOM 을 적용한 후에 “effect” 함수를 실행한다.
 Effect 들은 컴포넌트 내부에 선언되어있어서 props 와 state 로 접근이 가능하다.
+
+## useContext
+
+## useReducer
+
+## useRef
