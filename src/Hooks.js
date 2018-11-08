@@ -10,13 +10,10 @@ export default function Hooks(props) {
 
   const [surname, setSurname] = useState("Messi");
 
-  // useEffect(() => {
-  //   console.log("render1");
-  //   return () => console.log("render2");
-  // });
-
-  // const context = useContext(null);
-  // console.log(context);
+  useEffect(() => {
+    console.log("render1");
+    return () => console.log("render2");
+  });
 
   function onChangeName(e) {
     setName(e.target.value);
