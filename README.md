@@ -35,8 +35,24 @@ componentDidMount, componentDidUpdate, componentWillUnmount 와 같은 기능을
 useEffect 를 호출할때, React 는 변화된 DOM 을 적용한 후에 “effect” 함수를 실행한다.
 Effect 들은 컴포넌트 내부에 선언되어있어서 props 와 state 로 접근이 가능하다.
 
+이렇게 만든 함수는 렌더링마다 거치는 상황인데. 두번째 파라미터로 배열로 구성해서 넘겨주면, 해당 값들이 변화가 있을때만, 함수가 호출된다.
+
+```javascript
+useEffect(
+  () => {
+    const subscription = props.soucre.subscribe();
+    return () => {
+      subscription.unsubscribe();
+    };
+  },
+  [props.source]
+);
+```
+
 ## useContext
 
 ## useReducer
+
+Redux의 reudcer와 같은 패턴으로 state관리가 가능하다.
 
 ## useRef
